@@ -1,7 +1,6 @@
 # Go2Msg
 
-Go2Msg 是一个基于 Go 开发的信息发送模块
-目前支持以下发送方式
+Go2Msg 是一个基于 Go 开发的信息发送模块。目前支持以下发送方式
 
 - dingding
 - slack
