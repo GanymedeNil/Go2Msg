@@ -38,13 +38,13 @@ func SendMail(account, password, smtpUrl string, port int, params map[string]int
 	m := gomail.NewMessage()
 	m.SetAddressHeader("From", params["from"].(string), params["fromname"].(string))
 	m.SetHeader("To", strings.Join(params["to"].([]string), ","))
-	if len(params["cc"].([]string))>0{
+	if params["cc"] != nil {
 
 		m.SetHeaders(map[string][]string{
 			"Cc":params["cc"].([]string),
 		})
 	}
-	if len(params["bcc"].([]string))>0{
+	if params["bcc"]!= nil {
 
 		m.SetHeaders(map[string][]string{
 			"Bcc":params["bcc"].([]string),
